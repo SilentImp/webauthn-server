@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>WebAuthn</title>
+			<style>
+					form legend p {
+							margin: 0;
+							padding: 0;
+					}
+					
+					form legend h2 {
+							margin: 0;
+							padding: 0;
+					}
+					
+					form fieldset {
+							margin-top: 24px;
+							margin-bottom: 24px;
+					}
+					
+					form label {
+							margin: 24px 0;
+							display: block;
+					}
+					
+					form label small,
+					form label input {
+							display: block;
+					}
+					
+					body>header {
+							display: flex;
+							justify-content: space-between;
+							align-items: center;
+					}
+			</style>
+	</head>
+
+	<body>
+			<button id="sign-in" hidden>Аутентифицикация</button>
+
+			<form action="/challenge/register" method="POST" enctype="multipart/form-data">
+				<fieldset>
+          <legend>
+            <h2>Регистрация</h2>
+            <p>Это нужно, что бы доступ к вашим личным заметкам был только у вас.</p>
+          </legend>
+
+          <label>
+            Имя:
+            <small>Это вовсе не обязательно, но сделает работу с сервисом более приятной.</small>
+            <input 
+              name="name" 
+              placeholder="Ольга" 
+              type="text" 
+              autocomplete="name" 
+              autocorrect="off"
+              spellcheck="false"
+              value="">
+          </label>
+
+          <label>
+            Адрес электронной почты:
+            <small>Мы никому его не скажем и не будем присылать вам никаких писем без разрешения.</small>
+            <input 
+              name="email" 
+              placeholder="writer@gmail.com" 
+              inputmode="email" 
+              type="email" 
+              autocomplete="email username" 
+              autocorrect="off"
+              spellcheck="false"
+              autocapitalize="none"
+              autofocus
+              required
+              value="">
+          </label>
+
+          <label>
+            Пароль:
+            <small>Можете написать не слово, а фразу. Надежнее и запомнить легче.</small>
+            <input 
+              name="new-password"
+              type="password"
+              autocomplete="new-password"
+              placeholder="Бабель это не Бебель"
+              autocorrect="off"
+              spellcheck="false"
+              autocapitalize="none"
+              required
+              value="">
+          </label>
+
+        </fieldset>
+        <button type="submit">Зарегистрироваться</button>
+			</form>
+
+			<script src="javascript/config.js"></script>
+			<script src="javascript/registration.js"></script>
+			<script src="javascript/login.js"></script>
+	</body>
+</html>

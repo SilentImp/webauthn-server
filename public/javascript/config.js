@@ -1,0 +1,1 @@
+window.HOST = 'nice-cheetah-30.loca.lt';

@@ -1,0 +1,24 @@
+{
+  "name": "webauthn-server",
+  "version": "1.0.0",
+  "description": "Example of server that allow WebAuthn authentication",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "WebAuthn"
+  ],
+  "author": "Anton Nemtsev <thesilentimp@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "btoa": "^1.2.1",
+    "fastify": "^3.7.0",
+    "fastify-formbody": "^5.0.0",
+    "fastify-multipart": "^3.3.0",
+    "fastify-secure-session": "^2.3.0",
+    "fastify-static": "^3.2.1",
+    "fido2-library": "^2.5.0",
+    "nanoid": "^3.1.16"
+  }
+}
