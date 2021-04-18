@@ -39,21 +39,21 @@
 	</head>
 
 	<body>
-			<button id="sign-in" hidden>Аутентифицикация</button>
+			<button id="sign-in" hidden>Authentication</button>
 
 			<form action="/challenge/register" method="POST" enctype="multipart/form-data">
 				<fieldset>
           <legend>
-            <h2>Регистрация</h2>
-            <p>Это нужно, что бы доступ к вашим личным заметкам был только у вас.</p>
+            <h2>Registration</h2>
+            <p>Needed so only you can access your notes</p>
           </legend>
 
           <label>
-            Имя:
-            <small>Это вовсе не обязательно, но сделает работу с сервисом более приятной.</small>
+            Name:
+            <small>Not required, but nice to have for the full experience</small>
             <input 
               name="name" 
-              placeholder="Ольга" 
+              placeholder="Thijs" 
               type="text" 
               autocomplete="name" 
               autocorrect="off"
@@ -62,8 +62,8 @@
           </label>
 
           <label>
-            Адрес электронной почты:
-            <small>Мы никому его не скажем и не будем присылать вам никаких писем без разрешения.</small>
+            Email:
+            <small>We wouldn't say anyone and wouldn't send you any letter without your permission</small>
             <input 
               name="email" 
               placeholder="writer@gmail.com" 
@@ -79,13 +79,13 @@
           </label>
 
           <label>
-            Пароль:
-            <small>Можете написать не слово, а фразу. Надежнее и запомнить легче.</small>
+            Password:
+            <small>Feel free to write a phrase, not a word: it's more reliable and easy to remember</small>
             <input 
               name="new-password"
               type="password"
               autocomplete="new-password"
-              placeholder="Бабель это не Бебель"
+              placeholder="Babel is not Bebel"
               autocorrect="off"
               spellcheck="false"
               autocapitalize="none"
@@ -94,7 +94,7 @@
           </label>
 
         </fieldset>
-        <button type="submit">Зарегистрироваться</button>
+        <button type="submit">Register</button>
 			</form>
 
 			<script src="javascript/config.js"></script>

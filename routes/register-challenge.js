@@ -1,6 +1,17 @@
 const nanoid = require('nanoid').nanoid;
 
 module.exports = f2l => async(request, reply) => {
+  console.log(`
+  
+  
+  
+  `)
+  console.log(request.body);
+  console.log(`
+  
+  
+  
+  `)
   const {email, name} = JSON.parse(request.body);
   const registrationOptions = await f2l.attestationOptions();
   const challengeString = btoa(String.fromCharCode.apply(null, new Uint8Array(registrationOptions.challenge)));

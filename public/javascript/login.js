@@ -15,7 +15,7 @@ const validateLoginCredential = async credential => {
     body: JSON.stringify(authenticator),
   });
 
-  alert('Пользователь успешно аутентифицирован');
+  alert('User authenticated');
 };
 
 const signInHandler = async event => {

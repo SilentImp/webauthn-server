@@ -8,7 +8,7 @@ const validateRegistrationCredential = async credential => {
     type: credential.type,
   };
 
-  response = await fetch(`https://${window.HOST}/register`, {
+  const response = await fetch(`https://${window.HOST}/register`, {
     method: "POST",
     body: JSON.stringify(attestation),
   });
@@ -22,6 +22,7 @@ const validateRegistrationCredential = async credential => {
 
 const submitHandler = async (event) => {
   event.preventDefault();
+
   const form = event.currentTarget;
   const data = new FormData(form);
 
@@ -37,6 +38,8 @@ const submitHandler = async (event) => {
   });
   const publicKeyCredentialCreationOptions = await response.json();
 
+  console.log(publicKeyCredentialCreationOptions)
+
   publicKeyCredentialCreationOptions.user.id = Uint8Array.from(publicKeyCredentialCreationOptions.user.id, c => c.charCodeAt(0)).buffer;
   publicKeyCredentialCreationOptions.challenge = Uint8Array.from(atob(publicKeyCredentialCreationOptions.challenge), c => c.charCodeAt(0)).buffer;
 
@@ -49,10 +52,9 @@ const submitHandler = async (event) => {
 };
 
 
-(async() => {
-  if ('PublicKeyCredential' in window) {
-    const form = document.querySelector('form');
-    const button = form.querySelector('button');
-    form.addEventListener('submit', submitHandler);
-  }
-})();
+
+// alert('PublicKeyCredential' in window);
+// if ('PublicKeyCredential' in window) {
+const form = document.querySelector('form');
+form.addEventListener('submit', submitHandler);
+// }
