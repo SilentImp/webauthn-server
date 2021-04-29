@@ -15,3 +15,5 @@ node ./server.js
 ```
 
 Now you can open tunnel uri in the browser.
+
+> Only HTTPS is supported

@@ -38,8 +38,6 @@ const submitHandler = async (event) => {
   });
   const publicKeyCredentialCreationOptions = await response.json();
 
-  console.log(publicKeyCredentialCreationOptions)
-
   publicKeyCredentialCreationOptions.user.id = Uint8Array.from(publicKeyCredentialCreationOptions.user.id, c => c.charCodeAt(0)).buffer;
   publicKeyCredentialCreationOptions.challenge = Uint8Array.from(atob(publicKeyCredentialCreationOptions.challenge), c => c.charCodeAt(0)).buffer;
 
@@ -51,10 +49,7 @@ const submitHandler = async (event) => {
   document.getElementById('sign-in').removeAttribute('hidden');
 };
 
-
-
-// alert('PublicKeyCredential' in window);
-// if ('PublicKeyCredential' in window) {
-const form = document.querySelector('form');
-form.addEventListener('submit', submitHandler);
-// }
+if ('PublicKeyCredential' in window) {
+  const form = document.querySelector('form');
+  form.addEventListener('submit', submitHandler);
+}
