@@ -13,12 +13,12 @@
   "license": "ISC",
   "dependencies": {
     "btoa": "^1.2.1",
-    "fastify": "^3.7.0",
-    "fastify-formbody": "^5.0.0",
-    "fastify-multipart": "^3.3.0",
-    "fastify-secure-session": "^2.3.0",
-    "fastify-static": "^3.2.1",
-    "fido2-library": "^2.5.0",
-    "nanoid": "^3.1.16"
+    "fastify": "^3.24.0",
+    "fastify-formbody": "^5.2.0",
+    "fastify-multipart": "^5.1.0",
+    "fastify-secure-session": "^3.0.0",
+    "fastify-static": "^4.5.0",
+    "fido2-library": "^2.6.2",
+    "nanoid": "^3.1.30"
   }
 }

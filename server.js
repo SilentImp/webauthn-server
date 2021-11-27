@@ -20,6 +20,7 @@ fastify.register(require('fastify-formbody'));
 fastify.register(require('fastify-static'), {
   root: path.join(__dirname, 'public'),
 })
+
 fastify.register(require('fastify-secure-session'), {
   cookieName: 'session_id',
   secret: fs.readFileSync(path.join(__dirname, 'secret-key')),
