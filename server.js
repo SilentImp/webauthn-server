@@ -5,7 +5,7 @@ const fastify = require('fastify')({
   logger: true
 });
 
-const HOST = "light-hound-42.loca.lt";
+const HOST = "fat-frog-97.loca.lt";
 
 const f2l = new Fido2Lib({
   rpId: HOST,

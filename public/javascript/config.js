@@ -1,1 +1,1 @@
-window.HOST = 'light-hound-42.loca.lt';
+window.HOST = 'fat-frog-97.loca.lt';
